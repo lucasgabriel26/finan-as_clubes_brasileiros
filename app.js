@@ -1,7 +1,8 @@
+// Função para exibir a lista inicial de clubes
 function exibirClubes() {
     const containerClubes = document.getElementById('resultados-pesquisa');
     containerClubes.innerHTML = '';
-  
+    // Percorrer o array "dados" e cria uma carta de apresentação para cada um dos times listados na base de dados
     dados.forEach(clube => {
       const cartaClube = document.createElement('div');
       cartaClube.classList.add('carta-clube');
@@ -20,13 +21,14 @@ function exibirClubes() {
     });
   }
   
-  // Chame a função para exibir os clubes ao carregar a página
+  // Chame a função exibirClubes() para exibir os clubes ao carregar a página
     window.onload = exibirClubes;
 
+// Função chamada ao clicar no botão de pesquisa. Ela recebe o resultado e retorna um time relacionado
 function pesquisar() {
     let section = document.getElementById("resultados-pesquisa");
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
-
+    // Aviso de erro ao clicar em pesquisar sem digitar nada
     if (!campoPesquisa) {
         section.innerHTML = '<p class="aviso-erro">Nada foi encontrado. Você precisa digitar o nome de um time.</p>'
         return 
@@ -39,7 +41,7 @@ function pesquisar() {
     let serie = "";
     let receitabruta = null;
     let receitarecorrente = null;
-
+    // Percorre os dados atrás de algo igual ao que foi fornecido e contrói a carta daquele time.
     for (let dado of dados) {
         titulo = dado.titulo.toLowerCase();
         
@@ -58,7 +60,7 @@ function pesquisar() {
         `;
         }
     }
-
+    // aviso de erro ao digitar algo que não foi encontrado na base de dados 
     if (!resultados) {
         resultados = '<p class="aviso-erro">Nada foi encontrado.</p>'
     };
