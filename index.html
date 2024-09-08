@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="financa.png" type="image/x-icon">
+    <title>Finanças Clubes do Brasil</title>    
+</head>
+
+<body>
+    <header>
+        <h1>Clubes brasileiros</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="Digite o nome do time" id="campo-pesquisa">
+            <button onclick="pesquisar()">Pesquisar</button>
+        </section>
+
+        <div class="resultados-pesquisa" id="resultados-pesquisa"></div>
+    </main>
+    <footer>
+        <p>© 2024 - Relatório financeiro de clubes de futebol brasileiros. Todos os direitos reservados.</p>
+        <p>Dados baseados nos relatórios "Levantamento Financeiro de Clubes Brasileiros 2023" da <a href="https://www.ey.com" target="_blank">EY Brasil</a> e "Relatório Convocados/Galapagos Capital 2024" da <a href="https://convocados.net" target="_blank">Convocados</a>.</p>
+        <p>Elaborado por: Lucas Gabriel. Entre em contato por: lucasgabriel.lg626@gmail.com</p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
